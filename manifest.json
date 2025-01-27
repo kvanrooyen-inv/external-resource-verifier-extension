@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "My Firefox Extension",
+  "name": "External Resource Checker",
   "version": "1.0",
-  "description": "A Firefox extension with popup UI",
+  "description": "Check for libraries/external resources on a website based on known sources.",
   "icons": {
     "48": "icons/icon-48.png",
     "96": "icons/icon-96.png"
@@ -16,6 +16,6 @@
       "96": "icons/icon-96.png"
     },
     "default_popup": "popup/popup.html",
-    "default_title": "My Extension"
+    "default_title": "External Resource Checker"
   }
 }
