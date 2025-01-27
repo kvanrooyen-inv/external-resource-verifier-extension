@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="prism.css">
+  <script src="prism.min.js"></script>
 </head>
 <body>
   <div id="popup-content">
@@ -13,7 +15,7 @@
     <button id="checkButton">Check Current Page</button>
     <div id="results" class="hidden">
       <div id="noLibraries" class="hidden error-message">
-        No libraries detected
+        <img src="assets/cross-mark.png" class="emoji" alt="❌"> No libraries detected
       </div>
       <div id="librariesList"></div>
     </div>

@@ -1,144 +1,180 @@
 /* Catppuccin Mocha Colors */
-:root {
-  --ctp-base: #1e1e2e;
-  --ctp-surface0: #313244;
-  --ctp-surface1: #45475a;
-  --ctp-text: #cdd6f4;
-  --ctp-subtext0: #a6adc8;
-  --ctp-blue: #89b4fa;
-  --ctp-sapphire: #74c7ec;
-  --ctp-lavender: #b4befe;
-  --ctp-overlay0: #6c7086;
-}
+  :root {
+    --ctp-base: #1e1e2e;
+    --ctp-surface0: #313244;
+    --ctp-surface1: #45475a;
+    --ctp-text: #cdd6f4;
+    --ctp-subtext0: #a6adc8;
+    --ctp-blue: #89b4fa;
+    --ctp-sapphire: #74c7ec;
+    --ctp-lavender: #b4befe;
+    --ctp-overlay0: #6c7086;
+  }
+  
+  body {
+    width: 300px;
+    padding: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--ctp-base);
+    color: var(--ctp-text);
+    margin: 0;
+  }
+  
+  #popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  #checkButton {
+    background-color: var(--ctp-blue);
+    border: none;
+    color: var(--ctp-base);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  #checkButton:hover {
+    background-color: var(--ctp-sapphire);
+    transform: translateY(-1px);
+  }
+  
+  #checkButton:active {
+    background-color: var(--ctp-lavender);
+    transform: translateY(0);
+  }
+  
+  #checkButton:disabled {
+    background-color: var(--ctp-overlay0);
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  #results {
+    background-color: var(--ctp-surface0);
+    padding: 12px;
+    border-radius: 6px;
+    color: var(--ctp-subtext0);
+    font-size: 14px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .header h1 {
+    font-size: 18px;
+    color: var(--ctp-text);
+    margin: 0 0 8px 0;
+  }
+  
+  .subtitle {
+    font-size: 12px;
+    color: var(--ctp-subtext0);
+    margin: 0;
+  }
+  
+  .library-item {
+    background-color: var(--ctp-surface0);
+    border-radius: 6px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  
+  .library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    background-color: var(--ctp-surface0);
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: var(--ctp-text);
+  }
+  
+  .library-header:hover {
+    background-color: var(--ctp-surface1);
+  }
+  
+  .library-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ctp-text);
+  }
+  
+  .check-icon {
+    color: var(--ctp-green);
+  }
+  
+  .library-content {
+    background-color: var(--ctp-surface1);
+    padding: 12px;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  
+  .library-content pre {
+    margin: 0;
+    white-space: pre;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+  }
+  
+  .library-content code {
+    font-family: inherit;
+  }
+  
+  /* Custom scrollbar for code blocks */
+  .library-content::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .library-content::-webkit-scrollbar-track {
+    background: var(--ctp-surface0);
+    border-radius: 4px;
+  }
+  
+  .library-content::-webkit-scrollbar-thumb {
+    background: var(--ctp-overlay0);
+    border-radius: 4px;
+  }
+  
+  .library-content::-webkit-scrollbar-thumb:hover {
+    background: var(--ctp-overlay1);
+  }
+  
+  /* Emoji styling */
+  .emoji {
+    height: 1.25em;
+    width: 1.25em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+  }
+  
+  .error-message {
+    color: var(--ctp-red);
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .arrow {
+    transition: transform 0.2s;
+  }
+  
+  .arrow.expanded {
+    transform: rotate(180deg);
+  }
 
-body {
-  width: 300px;
-  padding: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: var(--ctp-base);
-  color: var(--ctp-text);
-  margin: 0;
-}
-
-#popup-content {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-#checkButton {
-  background-color: var(--ctp-blue);
-  border: none;
-  color: var(--ctp-base);
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-#checkButton:hover {
-  background-color: var(--ctp-sapphire);
-  transform: translateY(-1px);
-}
-
-#checkButton:active {
-  background-color: var(--ctp-lavender);
-  transform: translateY(0);
-}
-
-#checkButton:disabled {
-  background-color: var(--ctp-overlay0);
-  cursor: not-allowed;
-  transform: none;
-}
-
-#results {
-  background-color: var(--ctp-surface0);
-  padding: 12px;
-  border-radius: 6px;
-  color: var(--ctp-subtext0);
-  font-size: 14px;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.header h1 {
-  font-size: 18px;
-  color: var(--ctp-text);
-  margin: 0 0 8px 0;
-}
-
-.subtitle {
-  font-size: 12px;
-  color: var(--ctp-subtext0);
-  margin: 0;
-}
-
-.library-item {
-  background-color: var(--ctp-surface0);
-  border-radius: 6px;
-  margin-bottom: 8px;
-  overflow: hidden;
-}
-
-.library-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  cursor: pointer;
-  background-color: var(--ctp-surface0);
-  border: none;
-  width: 100%;
-  text-align: left;
-  color: var(--ctp-text);
-}
-
-.library-header:hover {
-  background-color: var(--ctp-surface1);
-}
-
-.library-name {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--ctp-text);
-}
-
-.check-icon {
-  color: var(--ctp-green);
-}
-
-.library-content {
-  background-color: var(--ctp-surface1);
-  padding: 12px;
-  font-family: monospace;
-  font-size: 12px;
-  color: var(--ctp-subtext0);
-  white-space: pre-wrap;
-  word-break: break-all;
-}
-
-.error-message {
-  color: var(--ctp-red);
-  text-align: center;
-  padding: 8px;
-  font-size: 14px;
-}
-
-.hidden {
-  display: none;
-}
-
-.arrow {
-  transition: transform 0.2s;
-}
-
-.arrow.expanded {
-  transform: rotate(180deg);
-}

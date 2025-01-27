@@ -46,7 +46,6 @@ const LIBRARY_DETECTION_METHODS = {
   )
 };
 
-document.addEventListener('DOMContentLoaded', function() {
   const checkButton = document.getElementById('checkButton');
   const resultsDiv = document.getElementById('results');
   const librariesList = document.getElementById('librariesList');
@@ -98,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
       checkButton.disabled = false;
       checkButton.textContent = 'Check Current Page';
     }
-  });
 });
 
 function createLibraryElement(lib) {
@@ -110,7 +108,7 @@ function createLibraryElement(lib) {
   
   const nameSpan = document.createElement('span');
   nameSpan.className = 'library-name';
-  nameSpan.innerHTML = `<span class="check-icon">✓</span> ${capitalizeFirst(lib.name)}`;
+  nameSpan.innerHTML = `<span class="emoji">✅</span> ${capitalizeFirst(lib.name)}`;
   
   const arrow = document.createElement('span');
   arrow.className = 'arrow';
@@ -121,7 +119,13 @@ function createLibraryElement(lib) {
 
   const content = document.createElement('div');
   content.className = 'library-content hidden';
-  content.textContent = lib.lines.join('\n');
+  const pre = document.createElement('pre');
+  const code = document.createElement('code');
+  code.className = 'language-html';
+  code.textContent = lib.lines.join('\n');
+  pre.appendChild(code);
+  content.appendChild(pre);
+  Prism.highlightElement(code);
 
   header.addEventListener('click', () => {
     content.classList.toggle('hidden');
