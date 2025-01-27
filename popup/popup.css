@@ -1,0 +1,34 @@
+body {
+  width: 300px;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+#popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#checkButton {
+  background-color: #0060df;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+#checkButton:hover {
+  background-color: #003eaa;
+}
+
+#checkButton:active {
+  background-color: #002275;
+}
+
+.hidden {
+  display: none;
+}
