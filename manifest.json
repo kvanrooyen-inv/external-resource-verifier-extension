@@ -8,7 +8,8 @@
     "96": "icons/icon-96.png"
   },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "<all_urls>"
   ],
   "browser_action": {
     "default_icon": {
@@ -16,6 +17,6 @@
       "96": "icons/icon-96.png"
     },
     "default_popup": "popup/popup.html",
-    "default_title": "External Resource Checker"
+    "default_title": "My Extension"
   }
 }

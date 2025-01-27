@@ -6,10 +6,18 @@
 </head>
 <body>
   <div id="popup-content">
-    <button id="checkButton">Run Checks</button>
-    <div id="results" class="hidden">
-      <!-- Results will be populated here -->
+    <div class="header">
+      <h1>External Resource Checker</h1>
+      <p class="subtitle">Check for external libraries on this page</p>
     </div>
+    <button id="checkButton">Check Current Page</button>
+    <div id="results" class="hidden">
+      <div id="noLibraries" class="hidden error-message">
+        No libraries detected
+      </div>
+      <div id="librariesList"></div>
+    </div>
+    <div id="error" class="hidden error-message"></div>
   </div>
   <script src="popup.js"></script>
 </body>

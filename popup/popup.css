@@ -62,7 +62,83 @@ body {
   font-size: 14px;
 }
 
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  font-size: 18px;
+  color: var(--ctp-text);
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: var(--ctp-subtext0);
+  margin: 0;
+}
+
+.library-item {
+  background-color: var(--ctp-surface0);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.library-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  background-color: var(--ctp-surface0);
+  border: none;
+  width: 100%;
+  text-align: left;
+  color: var(--ctp-text);
+}
+
+.library-header:hover {
+  background-color: var(--ctp-surface1);
+}
+
+.library-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ctp-text);
+}
+
+.check-icon {
+  color: var(--ctp-green);
+}
+
+.library-content {
+  background-color: var(--ctp-surface1);
+  padding: 12px;
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--ctp-subtext0);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.error-message {
+  color: var(--ctp-red);
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+}
+
 .hidden {
   display: none;
 }
 
+.arrow {
+  transition: transform 0.2s;
+}
+
+.arrow.expanded {
+  transform: rotate(180deg);
+}
