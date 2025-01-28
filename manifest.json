@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "External Resource Checker",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Check for libraries/external resources on a website based on known sources.",
   "icons": {
     "48": "icons/icon-48.png",

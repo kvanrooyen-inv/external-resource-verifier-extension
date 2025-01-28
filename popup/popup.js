@@ -34,8 +34,12 @@ const LIBRARY_DETECTION_METHODS = {
   ),
   fontAwesome: (htmlStr) => htmlStr.split('\n').filter(line =>
     line.toLowerCase().includes('font-awesome') ||
-    line.toLowerCase().includes('fontawesome') ||
-    line.toLowerCase().includes('fa-')
+    line.toLowerCase().includes('fontawesome')
+  ),
+  calcite: (htmlStr) => htmlStr.split('\n').filter(line =>
+    line.toLowerCase().includes('calcite.css') ||
+    line.toLowerCase().includes('calcite.js') ||
+    line.toLowerCase().includes('calcite.esm.js')
   ),
   webgl: (htmlStr) => htmlStr.split('\n').filter(line =>
     line.toLowerCase().includes('webgl') ||
