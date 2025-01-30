@@ -39,6 +39,7 @@ const LIBRARY_DETECTION_METHODS = {
   calcite: (htmlStr) => htmlStr.split('\n').filter(line =>
     line.toLowerCase().includes('calcite.css') ||
     line.toLowerCase().includes('calcite.js') ||
+    line.toLowerCase().includes('calcite.min.js') ||
     line.toLowerCase().includes('calcite.esm.js')
   ),
   webgl: (htmlStr) => htmlStr.split('\n').filter(line =>
